@@ -35,4 +35,27 @@ function div(){
     } 
 }
 
+function media(){
+    var m1 = parseFloat(Document.getElementById("m1").value)
+    var m1 = parseFloat(Document.getElementById("m2").value)
+    var m1 = parseFloat(Document.getElementById("m3").value)
+    var m1 = parseFloat(Document.getElementById("m4").value)
+    var m1 = parseFloat(Document.getElementById("m5").value)
+    var media = document.getElementById("respMedia")
+    var msg = Document.getElementById("msg")
+    var res = (m1, m2, m3, m4, m5) / 5
+    
+
+    if(res >= 7){
+        media.textContent = res
+        msg.textContent = "PASSOU"
+        msg.style.color = "green"
+    }else{
+        media.textContent = res
+        msg.textContent = "REPROVOU"
+        msg.style.color = "red"
+    }
+
+}
+
 
