@@ -40,7 +40,7 @@
         <div class="s1-right">
           <div class="wrap-img-card">
             <img class="img-s1" src="./assets/vetor.png">
-            
+
           </div>
         </div>
         <section>
@@ -116,6 +116,45 @@
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div> 
-      </section>      
+      </section>   
+    </section>
+    <section id="s4">
+        <h2>Contato</h2>
+        <div class="formulario">
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="nome">
+            <label for="assunto">Assunto</label>
+            <input type="text" placeholder="Digite o assunto" id="assunto">
+            <br>
+            <button onclick="enviar()">Enviar</button>
+        </div>
+    </section>
+    <footer>
+        <a target="_blank" href="https://www.instagram.com/"><img width="30px" height="auto" src="./assets/instagram.png" alt="Instagram"></a>
+        <a target="_blank" href="https://www.facebook.com/login"><img width="30px" height="auto" src="./assets/facebook.png" alt="Facebook"></a>
+        <a target="_blank" href="https://x.com/"><img width="30px" height="auto" src="./assets/twitter.png" alt="X"></a>
+        <a target="_blank" href="https://br.linkedin.com/"><img width="30px" height="auto" src="./assets/whatsapp.png" alt="Linkedin"></a>
+        <a target="_blank" href="https://www.youtube.com/"><img width="30px" height="auto" src="./assets/Youtube.png" alt="Youtube"></a>
+    </footer>
+</main>
+
+<script>
+    function enviar(){
+        document.getElementById("nome").style.border = "1px solid black"
+            document.getElementById("assunto").style.border = "1px solid black"
+        const nome = document.getElementById("nome").value
+        const assunto = document.getElementById("assunto").value
+       
+        if(!nome || !assunto){
+            document.getElementById("nome").style.border = "2px solid red"
+            document.getElementById("assunto").style.border = "2px solid red"
+            return
+        }
+
+        const mensagem = `Gostaria de entrar em contato!!! \n\nNome: ${nome} \nAssunto: ${assunto}`
+        const msg = encodeURIComponent(mensagem)
+        window.location.href = `https://wa.me/5541999999999?text=${msg}`
+    }
+</script>   
 </body>
 </html>
