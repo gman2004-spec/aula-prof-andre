@@ -1,0 +1,8 @@
+[
+    {
+        "id":1,
+        "descrição": "Produto 1",
+        "imagem": "../Assests/ARTE DA GUERRA/p1.webp",
+        "preço": 20.0
+    }
+]
